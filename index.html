@@ -9,10 +9,47 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">
+      <header class="header">
         <h4 class="title">Filtering Live Users</h4>
         <small class="subtitle">Search by name and/or location</small>
-      </div>
+        <input type="text" id="filter" placeholder="Search" />
+      </header>
+
+      <ul id="result" class="user-list">
+        <li>
+          <img
+            src="https://randomuser.me/api/portraits/women/33.jpg"
+            alt="Noami"
+          />
+          <div class="user-info">
+            <h4>Noami Schwartz</h4>
+            <p>Mannheim, Germany</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://randomuser.me/api/portraits/women/33.jpg"
+            alt="Noami"
+          />
+          <div class="user-info">
+            <h4>Noami Schwartz</h4>
+            <p>Mannheim, Germany</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://randomuser.me/api/portraits/women/33.jpg"
+            alt="Noami"
+          />
+          <div class="user-info">
+            <h4>Noami Schwartz</h4>
+            <p>Mannheim, Germany</p>
+          </div>
+        </li>
+        <li>
+          <h3>Loading....</h3>
+        </li>
+      </ul>
     </div>
 
     <script src="script.js"></script>
