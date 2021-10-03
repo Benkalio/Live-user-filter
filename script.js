@@ -3,6 +3,10 @@ const result = document.getElementById("result"),
   listItems = [];
 
 getData();
+
+//FILTERING INPUT
+filter.addEventListener("input", (e) => filterData(e.target.value));
+
 // USING ASYNC TO GET DATA AND CONSUME API
 async function getData() {
   const res = await fetch("https://randomuser.me/api?results=50");
@@ -29,5 +33,17 @@ async function getData() {
 
     //PUTTING EVERYTHING ABOVE INTO AN LI
     result.appendChild(li);
+  });
+}
+
+//FOR FILTERDATA
+function filterData(searchTerm) {
+  //IF THE WORD BEING TYPED IN THE SEARCH BAR MATCHES ANY OF THE NAMES BROUGHT UP IN LOWER CASE
+  listItems.forEach((item) => {
+    if (item.innerText.toLowerCase().includes(searchTerm.toLowerCase())) {
+      item.classList.remove("hide");
+    } else {
+      item.classList.add("hide");
+    }
   });
 }
